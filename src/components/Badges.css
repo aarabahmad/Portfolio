@@ -1,0 +1,98 @@
+.badges-section {
+    padding: 6rem 0;
+    position: relative;
+    background-color: var(--bg-alt); /* using alt background for stripe effect */
+}
+
+.badges-scroll-container {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding: 1rem 0 3rem 0;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(128, 128, 128, 0.3) transparent;
+    -webkit-overflow-scrolling: touch;
+}
+
+.badges-scroll-container::-webkit-scrollbar {
+    height: 6px;
+}
+
+.badges-scroll-container::-webkit-scrollbar-track {
+    background: rgba(128, 128, 128, 0.05);
+    border-radius: 6px;
+}
+
+.badges-scroll-container::-webkit-scrollbar-thumb {
+    background: rgba(128, 128, 128, 0.3);
+    border-radius: 6px;
+}
+
+.large-badge-card {
+    flex: 0 0 auto;
+    width: 220px;
+    min-height: 220px;
+    padding: 2.5rem 1.2rem 2.2rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.large-badge-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.badge-platform-indicator {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.8;
+    width: 100%;
+    text-align: center;
+}
+
+.large-badge-icon {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.large-badge-icon-placeholder {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.large-badge-name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .badges-section {
+        padding: 4rem 0;
+    }
+}

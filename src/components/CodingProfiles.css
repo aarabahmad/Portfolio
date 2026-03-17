@@ -1,0 +1,234 @@
+.coding-profiles-section {
+    padding: 6rem 0;
+    position: relative;
+    background-color: var(--bg-default);
+}
+
+.profiles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.profile-card {
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.profile-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(128, 128, 128, 0.05);
+    padding: 0.75rem;
+    border-radius: 12px;
+}
+
+.profile-platform {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.profile-body {
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.profile-username {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.profile-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    background: rgba(128, 128, 128, 0.05);
+    padding: 1.25rem;
+    border-radius: 12px;
+    border-left: 4px solid;
+    margin-bottom: 1.5rem;
+}
+
+.stat-value {
+    font-size: 1.75rem;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.stat-tag {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+
+.sub-stats-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(128, 128, 128, 0.02);
+    border-radius: 12px;
+    border: 1px solid rgba(128, 128, 128, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+.sub-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    flex: 1;
+}
+
+.sub-stat:not(:last-child) {
+    border-right: 1px solid rgba(128, 128, 128, 0.1);
+}
+
+.sub-stat-value {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.sub-stat-label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    text-transform: capitalize;
+}
+
+/* New CSS for Badges */
+.profile-badges-wrapper {
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(128, 128, 128, 0.1);
+}
+
+.badges-heading {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.profile-badges-container {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(128, 128, 128, 0.2) transparent;
+}
+
+.profile-badges-container::-webkit-scrollbar {
+    height: 4px;
+}
+
+.profile-badges-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.profile-badges-container::-webkit-scrollbar-thumb {
+    background: rgba(128, 128, 128, 0.2);
+    border-radius: 4px;
+}
+
+.badge-chip {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    background: rgba(128, 128, 128, 0.08);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    border: 1px solid rgba(128, 128, 128, 0.1);
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.badge-chip:hover {
+    background: rgba(128, 128, 128, 0.15);
+    color: var(--text-primary);
+}
+
+.badge-chip-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.profile-footer {
+    display: flex;
+}
+
+.profile-link {
+    width: 100%;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 12px;
+}
+
+.profile-link:hover .arrow {
+    transform: translateX(4px);
+}
+
+.loading-spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .coding-profiles-section {
+        padding: 4rem 0;
+    }
+    
+    .sub-stats-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .sub-stat:not(:last-child) {
+        border-right: none;
+    }
+}

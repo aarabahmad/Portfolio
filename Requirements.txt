@@ -1,0 +1,25 @@
+ # Portfolio ML/AI Transition - Remaining Requirements
+
+Here is a checklist of the remaining items you need to provide or update to complete your portfolio:
+
+1. **[DONE] Profile Picture**
+   - You need an actual profile picture to replace the placeholder we added.
+   - **Action**: Add a square image (e.g., `profile.jpg` or `profile.png`) to your `public` folder.
+   - **Update**: Go to `src/components/Hero.jsx` and change the `src="https://via.placeholder.com/150"` attribute in the `<img className="profile-image" />` tag to point to your new image (e.g., `src="/profile.jpg"`).
+
+2. **Resume Update**
+   - The "Resume" button in the navigation bar points to `/resume.pdf`.
+   - **Action**: Ensure you upload your new Machine Learning / AI focused resume as `resume.pdf` inside your `public` directory.
+
+3. **Project Links**
+   - The projects we added ("NexGen AI Platform", "Predictive Market Forecaster", "VisionAI Medical Analysis") have dummy links for their GitHub repositories and Live Sites.
+   - **Action**: Open `src/components/Projects.jsx`, find the `links` object for each project, and replace the `"#"` with your actual URLs. If you don't have a live link, you can remove the live link object property entirely or hide the button in `ProjectModal.jsx`. 
+
+4. **Contact Information & Social Links**
+   - Review your `src/components/Contact.jsx` and `src/components/Navbar.jsx` to ensure any email addresses, LinkedIn profiles, or GitHub profile links are pointing to your actual accounts.
+
+5. **Testimonial Avatars (Optional)**
+   - The testimonials currently use random Unsplash images for the client avatars.
+   - **Action**: If you have real clients you are quoting, replace the `avatar` URLs in `src/components/Testimonials.jsx` with their actual pictures.
+
+Once you check off these items, your ML/AI portfolio will be fully personalized and ready for production!
