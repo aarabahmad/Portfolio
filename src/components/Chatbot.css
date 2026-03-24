@@ -270,3 +270,55 @@
 .chat-close-btn:hover {
     color: var(--text-primary);
 }
+
+/* Quick Reply Chips */
+.quick-replies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.quick-reply-chip {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: var(--text-secondary);
+    font-size: 0.78rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: 100px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.quick-reply-chip:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.12);
+    color: var(--text-primary);
+    border-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-1px);
+}
+
+.quick-reply-chip:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* FAB pulse ring */
+.chatbot-fab::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    animation: fab-ring 2.5s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes fab-ring {
+    0%   { transform: scale(1); opacity: 0.6; }
+    50%  { transform: scale(1.15); opacity: 0; }
+    100% { transform: scale(1); opacity: 0.6; }
+}
