@@ -40,7 +40,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     <h2 className="modal-title">{project.title}</h2>
 
                     <div className="modal-meta">
-                        <span className="meta-item"><Calendar size={16} /> 2024</span>
+                        <span className="meta-item"><Calendar size={16} /> {project.date}</span>
                         <span className="meta-item"><User size={16} /> Solo Developer</span>
                         <span className="meta-item"><Tag size={16} /> AI Solution</span>
                     </div>
@@ -66,12 +66,16 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     </div>
 
                     <div className="modal-actions">
-                        <a href={project.links.live} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                            <ExternalLink size={18} style={{ marginRight: '0.5rem' }} /> View Live site
-                        </a>
-                        <a href={project.links.github} className="btn btn-secondary glass-panel" target="_blank" rel="noopener noreferrer">
-                            <Github size={18} style={{ marginRight: '0.5rem' }} /> View Source
-                        </a>
+                        {project.links.live && project.links.live !== '#' && (
+                            <a href={project.links.live} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                                <ExternalLink size={18} style={{ marginRight: '0.5rem' }} /> View Live site
+                            </a>
+                        )}
+                        {project.links.github && project.links.github !== '#' && (
+                            <a href={project.links.github} className="btn btn-secondary glass-panel" target="_blank" rel="noopener noreferrer">
+                                <Github size={18} style={{ marginRight: '0.5rem' }} /> View Source
+                            </a>
+                        )}
                     </div>
                 </div>
             </div>

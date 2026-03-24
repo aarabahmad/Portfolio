@@ -65,11 +65,7 @@ const About = () => {
 
                         <div className="stats-container">
                             <div className="stat-box glass-panel">
-                                <span className="stat-number text-gradient">5+</span>
-                                <span className="stat-label">Years Experience</span>
-                            </div>
-                            <div className="stat-box glass-panel">
-                                <span className="stat-number text-gradient">50+</span>
+                                <span className="stat-number text-gradient">10+</span>
                                 <span className="stat-label">Projects Completed</span>
                             </div>
                         </div>

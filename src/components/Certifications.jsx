@@ -6,25 +6,28 @@ import './Certifications.css';
 const Certifications = () => {
     const certifications = [
         {
-            title: 'AWS Certified Machine Learning – Specialty',
-            issuer: 'Amazon Web Services',
-            date: 'Dec 2023',
-            description: 'Validated expertise in building, training, tuning, and deploying machine learning models on AWS.',
-            link: '#'
+            title: '28 Days Competitive Programming',
+            issuer: 'AlgoTutor',
+            date: 'Aug 2025',
+            description: 'Successfully completed intensive training in Competitive Programming. Recognized for active participation, strong problem-solving skills, and excellence in practical assignments.',
+            link: 'https://drive.google.com/file/d/19SMuA7d9TTFKnz7GgQXl2oGhRfPySf0J/view?usp=sharing',
+            image: '/certificates/Aarab Ahmad - AlgoTutor.png'
         },
         {
-            title: 'Deep Learning Specialization',
-            issuer: 'DeepLearning.AI (Coursera)',
-            date: 'Aug 2023',
-            description: 'Mastered neural network foundations, CNNs, Sequence Models, and structuring machine learning projects.',
-            link: '#'
+            title: 'Social Networks (NPTEL Online Certification)',
+            issuer: 'NPTEL (IIT Madras)',
+            date: 'Apr 2024',
+            description: 'Successfully completed the NPTEL online certification course on "Social Networks" with a focus on graph theory, network analysis, and structural properties of social systems.',
+            link: 'https://drive.google.com/file/d/1cTlkHqhFAn8AJA-88ptKTbo6iCNTXq4c/view?usp=sharing',
+            image: '/certificates/Social Networks.png'
         },
         {
-            title: 'TensorFlow Developer Certificate',
-            issuer: 'Google',
-            date: 'Mar 2023',
-            description: 'Demonstrated proficiency in building deep learning models for computer vision, natural language processing, and time series forecasting.',
-            link: '#'
+            title: 'Graph Theory Programming Camp',
+            issuer: 'AlgoUniversity',
+            date: 'Mar 2024',
+            description: 'Successfully completed the Graphs Programming Camp under the mentorship of Codeforces Master, Manas Kumar Verma and conquering 17 advanced graph problems.',
+            link: 'https://drive.google.com/file/d/1iigi-C5s6YxDzqXH12zHyl9cPsYXhxw8/view?usp=sharing',
+            image: '/certificates/Aarab Ahmad - AlgoUniversity.png'
         }
     ];
 
@@ -68,9 +71,15 @@ const Certifications = () => {
                 >
                     {certifications.map((cert, index) => (
                         <motion.div key={index} className="cert-card glass-panel" variants={itemVariants}>
-                            <div className="cert-icon-container">
-                                <Award size={32} className="cert-icon" />
-                            </div>
+                            {cert.image ? (
+                                <div className="cert-image-container">
+                                    <img src={cert.image} alt={cert.title} className="cert-image" />
+                                </div>
+                            ) : (
+                                <div className="cert-icon-container">
+                                    <Award size={32} className="cert-icon" />
+                                </div>
+                            )}
                             <div className="cert-content">
                                 <h3 className="cert-title">{cert.title}</h3>
                                 <p className="cert-issuer">{cert.issuer}</p>

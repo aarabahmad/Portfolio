@@ -7,13 +7,13 @@ const Achievements = () => {
     const achievements = [
         {
             icon: <Trophy size={32} />,
-            title: 'Kaggle Competition Winner',
-            description: 'Placed 1st out of 2,000+ teams in the Global Predictive Modeling Challenge by optimizing a custom XGBoost ensemble model.'
+            title: 'LeetCode Contest Rating 1482',
+            description: 'Achieved a contest rating of 1482 on LeetCode through consistent competitive programming and solving algorithmic challenges across multiple contests.'
         },
         {
             icon: <Star size={32} />,
-            title: 'Outstanding Engineer Award 2024',
-            description: 'Recognized for single-handedly reducing cloud ML training costs by 40% through infrastructure redesign and spot-instance utilization.'
+            title: '750+ Problems Solved',
+            description: 'Solved over 750 coding problems across various platforms including LeetCode, Codeforces, and GeeksForGeeks, covering data structures, algorithms, and system design.'
         },
         {
             icon: <Target size={32} />,
