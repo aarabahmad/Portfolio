@@ -200,3 +200,19 @@
 .text-center {
     text-align: center;
 }
+
+.project-meta {
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.project-date {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    opacity: 0.8;
+}
